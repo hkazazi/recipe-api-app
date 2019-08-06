@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-from django import contrib.auth as cc
+from django.contrib.auth import password_validation
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -86,16 +86,16 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'cc.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'password_validation.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'cc.password_validation.MinimumLengthValidator',
+        'NAME': 'password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 'cc.password_validation.CommonPasswordValidator',
+        'NAME': 'password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 'cc.password_validation.NumericPasswordValidator',
+        'NAME': 'password_validation.NumericPasswordValidator',
     },
 ]
 
